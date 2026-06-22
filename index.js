@@ -1,4 +1,4 @@
-console.log("Hello World")
+console.log("Hello World");
 /* ============================================================
    LESSON 7 — FUNCTIONS: EXERCISES + TEST CASES  (EASY EDITION)
    ------------------------------------------------------------
@@ -47,11 +47,12 @@ console.log("Hello World")
 // ----- 1. Return a greeting -----
 // Write a function `sayHi` that takes NO input and RETURNS the string "Hi!".
 // your code here
-function sayHi(){
-    return "Hi!"
-} console.log(sayHi());
+function sayHi() {
+  return "Hi!";
+}
 console.log(sayHi());
-console.log(typeof sayHi())
+console.log(sayHi());
+console.log(typeof sayHi());
 // TEST 1:  sayHi()  ->  "Hi!"
 // TEST 2:  sayHi()  ->  "Hi!"   (a function returns the same thing every call)
 // TEST 3:  typeof sayHi()  ->  "string"
@@ -59,11 +60,12 @@ console.log(typeof sayHi())
 // ----- 2. Return a number -----
 // Write a function `luckyNumber` that takes NO input and RETURNS the number 7.
 // your code here
-function luckyNumber(){
-    return 7  
-}console.log(luckyNumber());
-console.log(luckyNumber() +1);
-console.log(luckyNumber()*2);
+function luckyNumber() {
+  return 7;
+}
+console.log(luckyNumber());
+console.log(luckyNumber() + 1);
+console.log(luckyNumber() * 2);
 // TEST 1:  luckyNumber()      ->  7
 // TEST 2:  luckyNumber() + 1  ->  8     (you get a real number back, so math works)
 // TEST 3:  luckyNumber() * 2  ->  14
@@ -72,9 +74,10 @@ console.log(luckyNumber()*2);
 // Write a function `giveFive` that RETURNS 5 (do NOT console.log inside it).
 // The point: returning lets the caller use the value. Logging only shows it.
 // your code here
-function giveFive(){
-    return 5
-} console.log(giveFive())
+function giveFive() {
+  return 5;
+}
+console.log(giveFive());
 console.log(giveFive() > 3);
 console.log(giveFive() + giveFive());
 // TEST 1:  giveFive()               ->  5
@@ -88,11 +91,12 @@ console.log(giveFive() + giveFive());
 // ----- 4. Double it -----
 // Write `double(n)` that RETURNS n times 2.
 // your code here
-function double(n){
-    return n*2
-}console.log(double(4));
+function double(n) {
+  return n * 2;
+}
+console.log(double(4));
 console.log(double(-3));
-console.log(double(0))
+console.log(double(0));
 // TEST 1:  double(4)   ->  8
 // TEST 2:  double(0)   ->  0
 // TEST 3:  double(-3)  ->  -6
@@ -100,11 +104,12 @@ console.log(double(0))
 // ----- 5. Square it -----
 // Write `square(n)` that RETURNS n times n.
 // your code here
- function square(n){
-    return n*n
- }console.log(square(1));
+function square(n) {
+  return n * n;
+}
+console.log(square(1));
 console.log(square(5));
-console.log(square(0))
+console.log(square(0));
 // TEST 1:  square(5)  ->  25
 // TEST 2:  square(1)  ->  1
 // TEST 3:  square(0)  ->  0
@@ -113,16 +118,16 @@ console.log(square(0))
 // Write `isEven(n)` that RETURNS true when n is even, false when odd.
 // Hint: n % 2 === 0.
 // your code here
-function isEven(n){
-    if(n % 2 === 0){
-        return true
-    }
-    else{
-        return false
-    }
-}console.log(isEven(10));
+function isEven(n) {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isEven(10));
 console.log(isEven(7));
-console.log(isEven(0))
+console.log(isEven(0));
 // console.log(isEven(10));
 // TEST 1:  isEven(10)  ->  true
 // TEST 2:  isEven(7)   ->  false
@@ -132,14 +137,14 @@ console.log(isEven(0))
 // Write `absValue(n)` that RETURNS n without its sign (negatives become positive).
 // Hint: if n < 0 return -n; else return n.  (Do NOT use Math.abs — build it yourself.)
 // your code here
-function absValue(n){
-    if(n < 0 ){
-        return -n
-    }
-    else{
-        return n
-    }
-} console.log(absValue(-9));
+function absValue(n) {
+  if (n < 0) {
+    return -n;
+  } else {
+    return n;
+  }
+}
+console.log(absValue(-9));
 console.log(absValue(9));
 console.log(absValue(0));
 // console.log(absValue(-9));
@@ -151,11 +156,12 @@ console.log(absValue(0));
 // Write `lastDigit(n)` that RETURNS the last digit of a non-negative integer.
 // Hint: n % 10.
 // your code here
-function lastDigit(n){
-        return n %10
-} console.log(lastDigit(7384));
+function lastDigit(n) {
+  return n % 10;
+}
+console.log(lastDigit(7384));
 console.log(lastDigit(50));
-console.log(lastDigit(9))
+console.log(lastDigit(9));
 // TEST 1:  lastDigit(7384)  ->  4
 // TEST 2:  lastDigit(50)    ->  0
 // TEST 3:  lastDigit(9)     ->  9
@@ -167,12 +173,12 @@ console.log(lastDigit(9))
 // ----- 9. Add two numbers -----
 // Write `add(a, b)` that RETURNS a + b.
 // your code here
-function add(a,b){
-    return a+b
+function add(a, b) {
+  return a + b;
 }
 console.log(add(3, 4));
 console.log(add(-2, 2));
-console.log(add(10, 100))
+console.log(add(10, 100));
 // TEST 1:  add(3, 4)    ->  7
 // TEST 2:  add(-2, 2)   ->  0
 // TEST 3:  add(10, 100) ->  110
@@ -180,16 +186,14 @@ console.log(add(10, 100))
 // ----- 10. Bigger of two -----
 // Write `maxOf(a, b)` that RETURNS the larger of a and b (return a if equal).
 // your code here
-function maxOf(a,b){
-    if(a>b){
-        return a
-    }
-    else if(a<b){
-        return b
-    }
-    else{ 
-        return  a
-    }
+function maxOf(a, b) {
+  if (a > b) {
+    return a;
+  } else if (a < b) {
+    return b;
+  } else {
+    return a;
+  }
 }
 console.log(maxOf(8, 3));
 console.log(maxOf(2, 20));
@@ -202,14 +206,14 @@ console.log(maxOf(5, 5));
 // Write `isMultiple(n, factor)` that RETURNS true if n divides evenly by factor.
 // Hint: n % factor === 0.
 // your code here
-function isMultiple(n, factor){
-    if(n % factor === 0){
-        return true
-    }
-    else{
-        return false
-    }
-}console.log(isMultiple(15, 3));
+function isMultiple(n, factor) {
+  if (n % factor === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isMultiple(15, 3));
 console.log(isMultiple(15, 4));
 console.log(isMultiple(10, 5));
 // TEST 1:  isMultiple(15, 3)  ->  true
@@ -219,8 +223,16 @@ console.log(isMultiple(10, 5));
 // ----- 12. Clamp a grade -----
 // Write `passOrFail(score, passMark)` that RETURNS "Pass" if score >= passMark, else "Fail".
 // your code here
-
-// console.log(passOrFail(72, 60));
+function passOrFail(score, passMark) {
+  if (score >= passMark) {
+    return "pass";
+  } else {
+    return "fail";
+  }
+}
+console.log(passOrFail(72, 60));
+console.log(passOrFail(50, 60));
+console.log(passOrFail(60, 60));
 // TEST 1:  passOrFail(72, 60)  ->  "Pass"
 // TEST 2:  passOrFail(50, 60)  ->  "Fail"
 // TEST 3:  passOrFail(60, 60)  ->  "Pass"
@@ -233,8 +245,12 @@ console.log(isMultiple(10, 5));
 // Write `greet(name = "friend")` that RETURNS "Hello, " + name + "!".
 // If called with no argument it uses "friend".
 // your code here
-
-// console.log(greet("Sam"));
+function greet(name = "friend") {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Sam"));
+console.log(greet());
+console.log(greet("A"));
 // TEST 1:  greet("Sam")  ->  "Hello, Sam!"
 // TEST 2:  greet()       ->  "Hello, friend!"
 // TEST 3:  greet("A")    ->  "Hello, A!"
@@ -242,8 +258,12 @@ console.log(isMultiple(10, 5));
 // ----- 14. Apply tax (default rate) -----
 // Write `withTax(price, rate = 0.1)` that RETURNS price + price * rate.
 // your code here
-
-// console.log(withTax(100));
+function withTax(price, rate = 0.1) {
+  return price + price * rate;
+}
+console.log(withTax(100));
+console.log(withTax(100, 0.2));
+console.log(withTax(0));
 // TEST 1:  withTax(100)       ->  110
 // TEST 2:  withTax(100, 0.2)  ->  120
 // TEST 3:  withTax(0)         ->  0
@@ -251,8 +271,18 @@ console.log(isMultiple(10, 5));
 // ----- 15. Sign of a number -----
 // Write `signOf(n)` that RETURNS "positive", "negative", or "zero".
 // your code here
-
-// console.log(signOf(-4));
+function signOf(n) {
+  if (n > 0) {
+    return "positive";
+  } else if (n < 0) {
+    return "negative";
+  } else {
+    return "zero";
+  }
+}
+console.log(signOf(-4));
+console.log(signOf(4));
+console.log(signOf(0));
 // TEST 1:  signOf(-4)  ->  "negative"
 // TEST 2:  signOf(4)   ->  "positive"
 // TEST 3:  signOf(0)   ->  "zero"
@@ -260,8 +290,17 @@ console.log(isMultiple(10, 5));
 // ----- 16. Min of three -----
 // Write `minOfThree(a, b, c)` that RETURNS the smallest of the three.
 // your code here
-
+// function minOfThree(a,b,c){
+//     if(a>b&& b<c){
+//         return b
+//     }
+//     else{
+//         return a
+//     }
+// }
 // console.log(minOfThree(5, 2, 9));
+// console.log(minOfThree(7, 7, 7));
+// console.log(minOfThree(3, 1, 1));
 // TEST 1:  minOfThree(5, 2, 9)  ->  2
 // TEST 2:  minOfThree(7, 7, 7)  ->  7
 // TEST 3:  minOfThree(3, 1, 1)  ->  1
@@ -277,8 +316,15 @@ console.log(isMultiple(10, 5));
 // Hint: result = ""; loop i = 1..n, add i (and a space) each turn; trim the trailing space at the end
 //       OR add a space BEFORE every number except the first.
 // your code here
-
-// console.log(countUp(5));
+function countUp(n){
+result = "";
+for(let i=1; i<=n; i++)
+result += i + " ";
+return result.trim();
+}
+console.log(countUp(5));
+console.log(countUp(1));
+console.log(countUp(3))
 // TEST 1:  countUp(5)  ->  "1 2 3 4 5"
 // TEST 2:  countUp(1)  ->  "1"
 // TEST 3:  countUp(3)  ->  "1 2 3"
@@ -287,8 +333,15 @@ console.log(isMultiple(10, 5));
 // Write `countDown(n)` that RETURNS "n n-1 ... 1 Go!" using a WHILE loop (not for).
 // Hint: let i = n; while (i >= 1) { ...; i--; } then add "Go!".
 // your code here
-
-// console.log(countDown(3));
+function countDown(n){
+  let i = n; 
+  while (i >= 1){
+    console.log(i); 
+    i--;
+  } return "Go!"
+}console.log(countDown(3));
+console.log(countDown(1));
+console.log(countDown(5))
 // TEST 1:  countDown(3)  ->  "3 2 1 Go!"
 // TEST 2:  countDown(1)  ->  "1 Go!"
 // TEST 3:  countDown(5)  ->  "5 4 3 2 1 Go!"
@@ -296,7 +349,12 @@ console.log(isMultiple(10, 5));
 // ----- L3. Sum a range -----
 // Write `sumRange(a, b)` that RETURNS a + (a+1) + ... + b. Assume a <= b. Loop inside.
 // your code here
-
+// function sumRange(a,b){
+//   let i= 0;
+//   for(let i=a; i<=b; i++){
+//     i+=i
+//   } return sumRange
+// }
 // console.log(sumRange(3, 6));
 // TEST 1:  sumRange(3, 6)   ->  18    (3 + 4 + 5 + 6)
 // TEST 2:  sumRange(1, 5)   ->  15
@@ -306,8 +364,15 @@ console.log(isMultiple(10, 5));
 // Write `repeatStr(word, times)` that RETURNS word stuck together `times` times. Loop inside.
 // Hint: result = ""; loop `times` -> result = result + word.  (Do NOT use word.repeat — build it.)
 // your code here
-
-// console.log(repeatStr("ab", 3));
+function repeatStr(word, times){
+  result = "";
+  for(let i=0; i<times; i++)
+result = result + word;
+  return result;
+} 
+console.log(repeatStr("ab", 3));
+console.log(repeatStr("x", 5));
+console.log(repeatStr("hi", 1));
 // TEST 1:  repeatStr("ab", 3)  ->  "ababab"
 // TEST 2:  repeatStr("x", 5)   ->  "xxxxx"
 // TEST 3:  repeatStr("hi", 1)  ->  "hi"
@@ -316,8 +381,18 @@ console.log(isMultiple(10, 5));
 // Write `countMultiples(n, k)` that RETURNS how many numbers from 1..n divide evenly by k.
 // Hint: loop 1..n, if (i % k === 0) count++.
 // your code here
-
-// console.log(countMultiples(50, 3));
+function countMultiples(n,k){
+  let count = 0; 
+  for(let i=1; i <= n; i++){
+    if(i % k === 0){
+     count++;
+}
+  }
+     return count
+}
+console.log(countMultiples(50, 3));
+console.log(countMultiples(10,5));
+console.log(countMultiples(2,3))
 // TEST 1:  countMultiples(50, 3)  ->  16
 // TEST 2:  countMultiples(10, 5)  ->  2
 // TEST 3:  countMultiples(2, 3)   ->  0
@@ -330,8 +405,16 @@ console.log(isMultiple(10, 5));
 // ----- 17. Sum 1 to n -----
 // Write `sumTo(n)` that RETURNS 1 + 2 + ... + n. Use a loop inside.
 // your code here
-
-// console.log(sumTo(100));
+function sumTo(n){
+  let total=0
+  for (let i=1; i<=n; i++){
+total+=i
+  }
+  return total
+}
+console.log(sumTo(100));
+console.log(sumTo(10));
+console.log(sumTo(1));
 // TEST 1:  sumTo(100)  ->  5050
 // TEST 2:  sumTo(10)   ->  55
 // TEST 3:  sumTo(1)    ->  1
@@ -339,8 +422,16 @@ console.log(isMultiple(10, 5));
 // ----- 18. Factorial -----
 // Write `factorial(n)` that RETURNS 1 * 2 * ... * n (factorial(0) is 1).
 // your code here
-
-// console.log(factorial(5));
+function factorial(n){
+  total1= 1
+  for(let i=1; i<=n; i++){
+    total1 *=i
+  }
+ return total1
+}
+console.log(factorial(5));
+console.log(factorial(3));
+console.log(factorial(0));
 // TEST 1:  factorial(5)  ->  120
 // TEST 2:  factorial(3)  ->  6
 // TEST 3:  factorial(0)  ->  1
@@ -349,7 +440,9 @@ console.log(isMultiple(10, 5));
 // Write `countVowels(word)` that RETURNS how many vowels (a,e,i,o,u) are in a lowercase word.
 // Hint: loop the chars; "aeiou".includes(word[i]).
 // your code here
-
+// function countVowels(word){
+//   while
+// }
 // console.log(countVowels("javascript"));
 // TEST 1:  countVowels("javascript")  ->  3
 // TEST 2:  countVowels("aeiou")       ->  5
@@ -584,4 +677,3 @@ console.log(isMultiple(10, 5));
    All 3 tests match for an exercise = you got it right.
    Any mismatch = a bug to hunt. Happy functioning!
    ============================================================ */
- 
