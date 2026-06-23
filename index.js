@@ -290,17 +290,19 @@ console.log(signOf(0));
 // ----- 16. Min of three -----
 // Write `minOfThree(a, b, c)` that RETURNS the smallest of the three.
 // your code here
-// function minOfThree(a,b,c){
-//     if(a>b&& b<c){
-//         return b
-//     }
-//     else{
-//         return a
-//     }
-// }
-// console.log(minOfThree(5, 2, 9));
-// console.log(minOfThree(7, 7, 7));
-// console.log(minOfThree(3, 1, 1));
+function minOfThree(a,b,c){
+    if(a<b && a<c){
+        return a
+    }
+    else if(b<c && b<a){
+        return b
+    } else{
+      return c
+    }
+}
+console.log(minOfThree(5, 2, 9));
+console.log(minOfThree(7, 7, 7));
+console.log(minOfThree(3, 1, 1));
 // TEST 1:  minOfThree(5, 2, 9)  ->  2
 // TEST 2:  minOfThree(7, 7, 7)  ->  7
 // TEST 3:  minOfThree(3, 1, 1)  ->  1
@@ -316,15 +318,14 @@ console.log(signOf(0));
 // Hint: result = ""; loop i = 1..n, add i (and a space) each turn; trim the trailing space at the end
 //       OR add a space BEFORE every number except the first.
 // your code here
-function countUp(n){
-result = "";
-for(let i=1; i<=n; i++)
-result += i + " ";
-return result.trim();
+function countUp(n) {
+  result = "";
+  for (let i = 1; i <= n; i++) result += i + " ";
+  return result.trim();
 }
 console.log(countUp(5));
 console.log(countUp(1));
-console.log(countUp(3))
+console.log(countUp(3));
 // TEST 1:  countUp(5)  ->  "1 2 3 4 5"
 // TEST 2:  countUp(1)  ->  "1"
 // TEST 3:  countUp(3)  ->  "1 2 3"
@@ -333,15 +334,17 @@ console.log(countUp(3))
 // Write `countDown(n)` that RETURNS "n n-1 ... 1 Go!" using a WHILE loop (not for).
 // Hint: let i = n; while (i >= 1) { ...; i--; } then add "Go!".
 // your code here
-function countDown(n){
-  let i = n; 
-  while (i >= 1){
-    console.log(i); 
+function countDown(n) {
+  let i = n;
+  while (i >= 1) {
+    console.log(i);
     i--;
-  } return "Go!"
-}console.log(countDown(3));
+  }
+  return "Go!";
+}
+console.log(countDown(3));
 console.log(countDown(1));
-console.log(countDown(5))
+console.log(countDown(5));
 // TEST 1:  countDown(3)  ->  "3 2 1 Go!"
 // TEST 2:  countDown(1)  ->  "1 Go!"
 // TEST 3:  countDown(5)  ->  "5 4 3 2 1 Go!"
@@ -349,13 +352,15 @@ console.log(countDown(5))
 // ----- L3. Sum a range -----
 // Write `sumRange(a, b)` that RETURNS a + (a+1) + ... + b. Assume a <= b. Loop inside.
 // your code here
-// function sumRange(a,b){
-//   let i= 0;
-//   for(let i=a; i<=b; i++){
-//     i+=i
-//   } return sumRange
-// }
-// console.log(sumRange(3, 6));
+function sumRange(a,b){
+  let sum = 0;
+  for(let i=a; i<=b; i++){
+    sum+=i
+  } return sum
+}
+console.log(sumRange(3, 6));
+console.log(sumRange(1,5));
+console.log(sumRange(4,4))
 // TEST 1:  sumRange(3, 6)   ->  18    (3 + 4 + 5 + 6)
 // TEST 2:  sumRange(1, 5)   ->  15
 // TEST 3:  sumRange(4, 4)   ->  4
@@ -364,12 +369,11 @@ console.log(countDown(5))
 // Write `repeatStr(word, times)` that RETURNS word stuck together `times` times. Loop inside.
 // Hint: result = ""; loop `times` -> result = result + word.  (Do NOT use word.repeat — build it.)
 // your code here
-function repeatStr(word, times){
+function repeatStr(word, times) {
   result = "";
-  for(let i=0; i<times; i++)
-result = result + word;
+  for (let i = 0; i < times; i++) result = result + word;
   return result;
-} 
+}
 console.log(repeatStr("ab", 3));
 console.log(repeatStr("x", 5));
 console.log(repeatStr("hi", 1));
@@ -381,18 +385,18 @@ console.log(repeatStr("hi", 1));
 // Write `countMultiples(n, k)` that RETURNS how many numbers from 1..n divide evenly by k.
 // Hint: loop 1..n, if (i % k === 0) count++.
 // your code here
-function countMultiples(n,k){
-  let count = 0; 
-  for(let i=1; i <= n; i++){
-    if(i % k === 0){
-     count++;
-}
+function countMultiples(n, k) {
+  let count = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % k === 0) {
+      count++;
+    }
   }
-     return count
+  return count;
 }
 console.log(countMultiples(50, 3));
-console.log(countMultiples(10,5));
-console.log(countMultiples(2,3))
+console.log(countMultiples(10, 5));
+console.log(countMultiples(2, 3));
 // TEST 1:  countMultiples(50, 3)  ->  16
 // TEST 2:  countMultiples(10, 5)  ->  2
 // TEST 3:  countMultiples(2, 3)   ->  0
@@ -405,12 +409,12 @@ console.log(countMultiples(2,3))
 // ----- 17. Sum 1 to n -----
 // Write `sumTo(n)` that RETURNS 1 + 2 + ... + n. Use a loop inside.
 // your code here
-function sumTo(n){
-  let total=0
-  for (let i=1; i<=n; i++){
-total+=i
+function sumTo(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
   }
-  return total
+  return total;
 }
 console.log(sumTo(100));
 console.log(sumTo(10));
@@ -422,12 +426,12 @@ console.log(sumTo(1));
 // ----- 18. Factorial -----
 // Write `factorial(n)` that RETURNS 1 * 2 * ... * n (factorial(0) is 1).
 // your code here
-function factorial(n){
-  total1= 1
-  for(let i=1; i<=n; i++){
-    total1 *=i
+function factorial(n) {
+   let total1 = 1;
+  for (let i = 1; i <= n; i++) {
+    total1 *= i;
   }
- return total1
+  return total1;
 }
 console.log(factorial(5));
 console.log(factorial(3));
@@ -440,10 +444,17 @@ console.log(factorial(0));
 // Write `countVowels(word)` that RETURNS how many vowels (a,e,i,o,u) are in a lowercase word.
 // Hint: loop the chars; "aeiou".includes(word[i]).
 // your code here
-// function countVowels(word){
-//   while
-// }
-// console.log(countVowels("javascript"));
+function countVowels(word){
+let count =0;
+for (let i=0; i<word.length; i++){
+  if("aeiou".includes(word[i]))
+    count++;
+}
+return count
+}
+console.log(countVowels("javascript"));
+console.log(countVowels("aeiou"));
+console.log(countVowels("xyz"))
 // TEST 1:  countVowels("javascript")  ->  3
 // TEST 2:  countVowels("aeiou")       ->  5
 // TEST 3:  countVowels("xyz")         ->  0
@@ -452,8 +463,16 @@ console.log(factorial(0));
 // Write `reverse(word)` that RETURNS the word backwards.
 // Hint: result = ""; loop and do result = word[i] + result.
 // your code here
-
-// console.log(reverse("code"));
+function reverse(word){
+  result = "";
+  for(let i=0; i<word.length; i++){
+    result = word[i] + result
+  }
+  return result
+}
+console.log(reverse("code"));
+console.log(reverse("abc"));
+console.log(reverse("x"))
 // TEST 1:  reverse("code")  ->  "edoc"
 // TEST 2:  reverse("abc")   ->  "cba"
 // TEST 3:  reverse("x")     ->  "x"
@@ -467,8 +486,12 @@ console.log(factorial(0));
 // Write `quadruple(n)` that RETURNS n times 4 BY CALLING `double` twice.
 // Hint: return double(double(n)).
 // your code here
-
-// console.log(quadruple(3));
+function quadruple(n){
+  return  double(double(n))
+}
+console.log(quadruple(3));
+console.log(quadruple(0));
+console.log(quadruple(5));
 // TEST 1:  quadruple(3)  ->  12
 // TEST 2:  quadruple(0)  ->  0
 // TEST 3:  quadruple(5)  ->  20
@@ -477,8 +500,14 @@ console.log(factorial(0));
 // Write `sumOfSquares(n)` that RETURNS square(1) + square(2) + ... + square(n).
 // Call your `square` from exercise 5 inside the loop.
 // your code here
-
-// console.log(sumOfSquares(3));
+function sumOfSquares(n){
+   let square = 0; 
+  for (let i=1; i<=n; i++){
+    square += i*i;
+  }
+return square
+}
+console.log(sumOfSquares(3));
 // TEST 1:  sumOfSquares(3)  ->  14    (1 + 4 + 9)
 // TEST 2:  sumOfSquares(1)  ->  1
 // TEST 3:  sumOfSquares(5)  ->  55    (1 + 4 + 9 + 16 + 25)
@@ -487,8 +516,18 @@ console.log(factorial(0));
 // Write `bothEven(a, b)` that RETURNS true only if a AND b are both even.
 // Call your `isEven` from exercise 6.
 // your code here
-
+// function bothEven(a,b){
+//   let isEven= 0;
+//   if( a=true && b===true){
+//     return true
+//   }
+//   else{
+//     return false
+// }
+// }
 // console.log(bothEven(4, 8));
+// console.log(bothEven(4, 7));
+// console.log(bothEven(3, 9));
 // TEST 1:  bothEven(4, 8)  ->  true
 // TEST 2:  bothEven(4, 7)  ->  false
 // TEST 3:  bothEven(3, 9)  ->  false
