@@ -318,7 +318,7 @@ console.log(minOfThree(3, 1, 1));
 //       OR add a space BEFORE every number except the first.
 // your code here
 function countUp(n) {
-   let result = "";
+  let result = "";
   for (let i = 1; i <= n; i++) {
     result += i + " ";
   }
@@ -372,7 +372,7 @@ console.log(sumRange(4, 4));
 // Hint: result = ""; loop `times` -> result = result + word.  (Do NOT use word.repeat — build it.)
 // your code here
 function repeatStr(word, times) {
-   let result = "";
+  let result = "";
   for (let i = 0; i < times; i++) {
     result = result + word;
   }
@@ -451,9 +451,9 @@ console.log(factorial(0));
 function countVowels(word) {
   let count = 0;
   for (let i = 0; i < word.length; i++) {
-    if ("aeiou".includes(word[i])){
+    if ("aeiou".includes(word[i])) {
       count++;
-    } 
+    }
   }
   return count;
 }
@@ -469,7 +469,7 @@ console.log(countVowels("xyz"));
 // Hint: result = ""; loop and do result = word[i] + result.
 // your code here
 function reverse(word) {
-   let result = "";
+  let result = "";
   for (let i = 0; i < word.length; i++) {
     result = word[i] + result;
   }
@@ -588,21 +588,21 @@ console.log(power(3, 3));
 // tracking BOTH a running max and a running min.
 // Hint: start hi = 0, lo = 9; for each digit d -> if (d > hi) hi = d; if (d < lo) lo = d.
 // your code here
-function digitSpread(n){
+function digitSpread(n) {
   let hi = 0;
-let lo = 9;
-let d;
-while (n > 0){
-  d = n % 10; 
-  if (d > hi) {
-    hi = d;
-  } 
-  if(d < lo) {
-    lo = d;
+  let lo = 9;
+  let d;
+  while (n > 0) {
+    d = n % 10;
+    if (d > hi) {
+      hi = d;
+    }
+    if (d < lo) {
+      lo = d;
+    }
+    n = Math.floor(n / 10);
   }
-  n = Math.floor(n/10);  
-}
-return hi-lo;
+  return hi - lo;
 }
 console.log(digitSpread(364));
 console.log(digitSpread(70));
@@ -635,14 +635,13 @@ console.log(reverseNumber(6));
 // (so 1, base, base*base, ...), else false. base is >= 2.
 // Hint: while n % base === 0 -> n = n / base; it is a power of base if you end at exactly 1.
 // your code here
-function isPowerOf (n,base){
-  while (n % base === 0){
+function isPowerOf(n, base) {
+  while (n % base === 0) {
     n = n / base;
   }
-  if(n === 1) {
+  if (n === 1) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
@@ -810,10 +809,20 @@ console.log(isPalindrome(8));
 // Hint (easy way): loop i from 1 up to the smaller of a and b; whenever i divides
 //   both a and b, remember it; the LAST such i is the answer.
 // your code here
-// function gcd(a,b){
-// for(let i = 1; i)
-// }
-// console.log(gcd(12, 8));
+function gcd(a, b) {
+  let smaller = Math.min(a, b);
+  let result = 1;
+  for (let i = 1; i <= smaller; i++) {
+    if (a % i === 0 && b % i === 0) {
+      result = i;
+    }
+  }
+  return result;
+}
+
+console.log(gcd(12, 8));
+console.log(gcd(7, 5));
+console.log(gcd(9, 9));
 // EXAMPLE 1:  gcd(12, 8)   ->  4    (1,2,4 divide both; 4 is biggest)
 // EXAMPLE 2:  gcd(7, 5)    ->  1    (only 1 divides both)
 // EXAMPLE 3:  gcd(9, 9)    ->  9
