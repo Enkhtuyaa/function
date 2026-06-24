@@ -318,8 +318,10 @@ console.log(minOfThree(3, 1, 1));
 //       OR add a space BEFORE every number except the first.
 // your code here
 function countUp(n) {
-  result = "";
-  for (let i = 1; i <= n; i++) result += i + " ";
+   let result = "";
+  for (let i = 1; i <= n; i++) {
+    result += i + " ";
+  }
   return result.trim();
 }
 console.log(countUp(5));
@@ -370,8 +372,10 @@ console.log(sumRange(4, 4));
 // Hint: result = ""; loop `times` -> result = result + word.  (Do NOT use word.repeat — build it.)
 // your code here
 function repeatStr(word, times) {
-  result = "";
-  for (let i = 0; i < times; i++) result = result + word;
+   let result = "";
+  for (let i = 0; i < times; i++) {
+    result = result + word;
+  }
   return result;
 }
 console.log(repeatStr("ab", 3));
@@ -447,7 +451,9 @@ console.log(factorial(0));
 function countVowels(word) {
   let count = 0;
   for (let i = 0; i < word.length; i++) {
-    if ("aeiou".includes(word[i])) count++;
+    if ("aeiou".includes(word[i])){
+      count++;
+    } 
   }
   return count;
 }
@@ -463,7 +469,7 @@ console.log(countVowels("xyz"));
 // Hint: result = ""; loop and do result = word[i] + result.
 // your code here
 function reverse(word) {
-  result = "";
+   let result = "";
   for (let i = 0; i < word.length; i++) {
     result = word[i] + result;
   }
@@ -582,16 +588,25 @@ console.log(power(3, 3));
 // tracking BOTH a running max and a running min.
 // Hint: start hi = 0, lo = 9; for each digit d -> if (d > hi) hi = d; if (d < lo) lo = d.
 // your code here
-// function digitSpread(n){
-//   let starthi = 0;
-// let lo = 9;
-// while (n>0){
-//   n%10===0;
-// Math.floor(/10)===0;
-// }
-
-// }
-// console.log(digitSpread(364));
+function digitSpread(n){
+  let hi = 0;
+let lo = 9;
+let d;
+while (n > 0){
+  d = n % 10; 
+  if (d > hi) {
+    hi = d;
+  } 
+  if(d < lo) {
+    lo = d;
+  }
+  n = Math.floor(n/10);  
+}
+return hi-lo;
+}
+console.log(digitSpread(364));
+console.log(digitSpread(70));
+console.log(digitSpread(5));
 // EXAMPLE 1:  digitSpread(364)  ->  3    (max 6, min 3)
 // EXAMPLE 2:  digitSpread(70)   ->  7    (max 7, min 0)
 // EXAMPLE 3:  digitSpread(5)    ->  0    (one digit: max == min)
@@ -620,18 +635,20 @@ console.log(reverseNumber(6));
 // (so 1, base, base*base, ...), else false. base is >= 2.
 // Hint: while n % base === 0 -> n = n / base; it is a power of base if you end at exactly 1.
 // your code here
-// function isPowerOf (n,base){
-//   while (n % base===0){
-//     n = n / base;
-//     if(n>=1){
-//       return true
-//     }
-//     else{
-//       return n
-//     }
-//   }
-// }
-// console.log(isPowerOf(1, 5));
+function isPowerOf (n,base){
+  while (n % base === 0){
+    n = n / base;
+  }
+  if(n === 1) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+console.log(isPowerOf(27, 3));
+console.log(isPowerOf(1, 5));
+console.log(isPowerOf(12, 2));
 // EXAMPLE 1:  isPowerOf(27, 3)  ->  true    (3×3×3)
 // EXAMPLE 2:  isPowerOf(1, 5)   ->  true    (base^0 = 1)
 // EXAMPLE 3:  isPowerOf(12, 2)  ->  false   (12 = 2×2×3, the 3 ruins it)
@@ -731,7 +748,7 @@ function collatzSteps(n) {
 }
 console.log(collatzSteps(6));
 console.log(collatzSteps(0));
-console.log(collatzSteps(7))
+console.log(collatzSteps(7));
 // EXAMPLE 1:  collatzSteps(6)  ->  8    (6→3→10→5→16→8→4→2→1)
 // EXAMPLE 2:  collatzSteps(1)  ->  0    (already 1, no steps)
 // EXAMPLE 3:  collatzSteps(7)  ->  16
@@ -740,15 +757,15 @@ console.log(collatzSteps(7))
 // Write `fizzAt(i)` that RETURNS, for a single number i:
 //   "FizzBuzz" if divisible by 3 and 5, "Fizz" if by 3, "Buzz" if by 5, else String(i).
 // your code here
-function fizzAt(i){
-  if(i % 3 === 0 && i % 5 ===0){
-   return "FizzBuzz";
-  } else if(i % 3 === 0) {
-     return "Fizz";
-  }else if(i % 5 === 0){
-     return "Buzz";
-  }else{
-     return (i)
+function fizzAt(i) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    return "FizzBuzz";
+  } else if (i % 3 === 0) {
+    return "Fizz";
+  } else if (i % 5 === 0) {
+    return "Buzz";
+  } else {
+    return i;
   }
 }
 console.log(fizzAt(15));
@@ -763,7 +780,7 @@ console.log(fizzAt(7));
 // Write `isHarshad(n)` and CALL sumDigits(n) from E1 — do NOT re-sum the digits here.
 // Hint: return n % sumDigits(n) === 0;
 // your code here
-function isHarshad(n){
+function isHarshad(n) {
   return n % sumDigits(n) === 0;
 }
 console.log(isHarshad(18));
@@ -778,7 +795,7 @@ console.log(isHarshad(21));
 // Do NOT re-derive the reverse here — CALL reverseNumber(n) from E4 and compare to n.
 // Hint: return reverseNumber(n) === n;
 // your code here
-function isPalindrome(n){
+function isPalindrome(n) {
   return reverseNumber(n) === n;
 }
 console.log(isPalindrome(1331));
@@ -794,7 +811,7 @@ console.log(isPalindrome(8));
 //   both a and b, remember it; the LAST such i is the answer.
 // your code here
 // function gcd(a,b){
-// for(let i=1; i)
+// for(let i = 1; i)
 // }
 // console.log(gcd(12, 8));
 // EXAMPLE 1:  gcd(12, 8)   ->  4    (1,2,4 divide both; 4 is biggest)
@@ -806,15 +823,15 @@ console.log(isPalindrome(8));
 // Write `digitalRoot(n)` and CALL `sumDigits(n)` (from E1) inside a loop.
 // Hint: while n has more than one digit (n >= 10) -> n = sumDigits(n); return n.
 // your code here
-function digitalRoot(n){
-while(n >= 10){
-  n = sumDigits(n)
-}
-return n
+function digitalRoot(n) {
+  while (n >= 10) {
+    n = sumDigits(n);
+  }
+  return n;
 }
 console.log(digitalRoot(942));
 console.log(digitalRoot(38));
-console.log(digitalRoot(5))
+console.log(digitalRoot(5));
 // EXAMPLE 1:  digitalRoot(942)  ->  6    (9+4+2=15, then 1+5=6)
 // EXAMPLE 2:  digitalRoot(38)   ->  2    (3+8=11, then 1+1=2)
 // EXAMPLE 3:  digitalRoot(5)    ->  5    (already one digit)
@@ -827,13 +844,13 @@ console.log(digitalRoot(5))
 // Write `countdown(n)` that RETURNS "n n-1 ... 1 Go!" as one string with single spaces.
 // You may use a loop OR call countdown(n-1) inside itself (recursion). Either is fine.
 // your code here
-function countdown(n){
-  let i=n;
-  while(i>0){
+function countdown(n) {
+  let i = n;
+  while (i > 0) {
     console.log(i);
-  i--;
-}
-return "Go!"
+    i--;
+  }
+  return "Go!";
 }
 console.log(countdown(3));
 console.log(countdown(1));
